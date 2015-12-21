@@ -12,21 +12,17 @@ calculate.addEventListener('click', calcFunction, false);
 
 function calcFunction() {
     var tal = Number(document.getElementById("tal").value);
-
+    
     var squareresult = square(tal);
-
     if (isNaN(squareresult)) {
 
         alert("Du angav ingen siffra!");
-    }
-
-    else {
+    } else {
         document.getElementById("result").value = squareresult;
 
     }
-
 }
 
 function square(tal) {
-    return (tal.Math.sqrt(tal));
+    return Math.sqrt(tal);
 }
