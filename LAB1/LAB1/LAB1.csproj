@@ -65,8 +65,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="discount.html" />
-    <Content Include="Scripts\discount.js" />
+    <Content Include="exchange.html" />
+    <Content Include="Scripts\exchange.js" />
     <Content Include="Scripts\square.js" />
     <Content Include="Scripts\sumAndAverage.js" />
     <Content Include="square.html" />
