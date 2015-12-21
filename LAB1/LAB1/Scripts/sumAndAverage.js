@@ -1,4 +1,11 @@
-﻿// 1) Hämtar ut knappen (elementet)
+﻿/*
+
+Rita en algoritm som läser in tre tal och beräknar och
+skriver ut summan och medelvärdet av de tre talen.
+
+*/
+
+// 1) Hämtar ut knappen (elementet)
 var calculate = document.getElementById("calculatebutton");
 
 //4 lägger til ett klick-event:
