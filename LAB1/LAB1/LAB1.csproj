@@ -65,6 +65,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\sumAndAverage.js" />
+    <Content Include="sumandaverage.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
