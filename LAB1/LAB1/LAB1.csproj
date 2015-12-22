@@ -65,7 +65,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="array.html" />
     <Content Include="exchange.html" />
+    <Content Include="Scripts\array.js" />
     <Content Include="Scripts\exchange.js" />
     <Content Include="Scripts\square.js" />
     <Content Include="Scripts\sumAndAverage.js" />
