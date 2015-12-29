@@ -1,11 +1,19 @@
 ﻿//happy hour logic:
 
 //Method calls:
+addPictures();
 
 
 //Adjust price function: (add .toFixed(2) for 2 decimals)
 
 /*Add pictures function to span:*/
+
+function addPictures() {
+    var pictureSpans = document.getElementsByTagName("span");
+    for (var i = 0; i < pictureSpans.length; i++) {
+        pictureSpans[i].innerHTML = "<img src='Images/Hamburger.png' />"; 
+    }
+}
 
 /*Add todays offer function. 
 Make price background red. 
