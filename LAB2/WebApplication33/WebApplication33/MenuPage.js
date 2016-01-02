@@ -1,13 +1,17 @@
-﻿//happy hour logic:
+﻿// Method calls:
+happyHourFunc();
+addPictures();
+adjustPrice();
+todaysOffer();
 
-var currentTime = new Date().getUTCHours() + 1;
-var happyHour = 16;
+//happy hour logic:
 
 function happyHourFunc() {
-
+    var currentTime = new Date().getUTCHours() + 1;
+    var happyHour = 16;
 
     if (currentTime === happyHour) {
-        alert("Its happyHour! Prices are 10% off");
+        alert("Its Happy Hour! Prices are 10% off");
 
         var priceDivs = document.getElementsByClassName("price");
         for (var i = 0; i < priceDivs.length; i++) {
@@ -18,10 +22,6 @@ function happyHourFunc() {
     }
 }
 
-//Method calls:
-happyHourFunc();
-addPictures();
-adjustPrice();
 
 //Adjust price function: (add .toFixed(2) for 2 decimals)
 
@@ -38,13 +38,39 @@ function adjustPrice() {
 function addPictures() {
     var pictureSpans = document.getElementsByTagName("span");
     for (var i = 0; i < pictureSpans.length; i++) {
-        pictureSpans[i].innerHTML = '<img src="Images/Hamburger.png" />';
+        pictureSpans[i].innerHTML = "<img src='Images/Hamburger.png' />";
     }
 }
 
 /*Add todays offer function. 
 Make price background red. 
 Reduce price by another 20%:*/
+function todaysOffer() {
+
+    alert("hej");
+    var todaysDate = new Date();
+    var todaysdayName = todaysDate.getDay();
+    var priceDiv = document.getElementById(todaysdayName);
+    switch (todaysdayName) {
+        case document.getElementById("monday") === todaysdayName:
+
+        case document.getElementById("tuesday") === todaysdayName:
+
+        case document.getElementById("wednesday") === todaysdayName:
+
+        case document.getElementById("thursday") === todaysdayName:
+
+        case document.getElementById("friday") === todaysdayName:
+
+        case document.getElementById("saturday") === todaysdayName:
+            alert("hej");
+            var newPrice = Number(priceDiv.innerHTML) * 0.8;
+            priceDiv.innerHTML = newPrice;
+        case document.getElementById("sunday") === todaysdayName:
+
+        default:
+    }
+}
 
 /*Stretch exercises: (increasing tuffness for each number!)
 
