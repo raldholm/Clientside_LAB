@@ -1,17 +1,44 @@
 ﻿//happy hour logic:
 
+var currentTime = new Date().getUTCHours() + 1;
+var happyHour = 16;
+
 //Method calls:
 addPictures();
+adjustPrice();
+happyHour();
+
+function happyHour()
+{
+    if(currentTime === happyHour)
+    {
+        var priceDivs = document.getElementsByClassName("price");
+        alert("Its happyHour! Prices are 10% off");
+        for (var i = 0; i < priceDivs.length; i++) {
+            var price = Number(priceDivs[i].innerHTML) * 0.9;
+            priceDivs[i].innerHTML = price;
+
+        }
+    }
+}
 
 
 //Adjust price function: (add .toFixed(2) for 2 decimals)
+
+function adjustPrice() {
+    var priceDivs = document.getElementsByClassName("price");
+    for (var i = 0; i < priceDivs.length; i++) {
+        var price = Number(priceDivs[i].innerHTML.toFixed(2));
+        priceDivs[i].innerHTML = price;
+    }
+}
 
 /*Add pictures function to span:*/
 
 function addPictures() {
     var pictureSpans = document.getElementsByTagName("span");
     for (var i = 0; i < pictureSpans.length; i++) {
-        pictureSpans[i].innerHTML = "<img src='Images/Hamburger.png' />"; 
+        pictureSpans[i].innerHTML = '<img src="Images/Hamburger.png" />'; 
     }
 }
 

@@ -68,7 +68,7 @@
     <Content Include="Images\Drink.png" />
     <Content Include="Images\Hamburger.png" />
     <Content Include="Images\Pizza.png" />
-    <Content Include="Images\Subs.PNG" />
+    <Content Include="Subs.PNG" />
     <Content Include="Menu.html" />
     <Content Include="MenuPage.css" />
     <Content Include="MenuPage.js" />
