@@ -3,17 +3,13 @@
 var currentTime = new Date().getUTCHours() + 1;
 var happyHour = 16;
 
-//Method calls:
-addPictures();
-adjustPrice();
-happyHour();
+function happyHourFunc() {
 
-function happyHour()
-{
-    if(currentTime === happyHour)
-    {
-        var priceDivs = document.getElementsByClassName("price");
+
+    if (currentTime === happyHour) {
         alert("Its happyHour! Prices are 10% off");
+
+        var priceDivs = document.getElementsByClassName("price");
         for (var i = 0; i < priceDivs.length; i++) {
             var price = Number(priceDivs[i].innerHTML) * 0.9;
             priceDivs[i].innerHTML = price;
@@ -22,6 +18,10 @@ function happyHour()
     }
 }
 
+//Method calls:
+happyHourFunc();
+addPictures();
+adjustPrice();
 
 //Adjust price function: (add .toFixed(2) for 2 decimals)
 
@@ -38,7 +38,7 @@ function adjustPrice() {
 function addPictures() {
     var pictureSpans = document.getElementsByTagName("span");
     for (var i = 0; i < pictureSpans.length; i++) {
-        pictureSpans[i].innerHTML = '<img src="Images/Hamburger.png" />'; 
+        pictureSpans[i].innerHTML = '<img src="Images/Hamburger.png" />';
     }
 }
 
