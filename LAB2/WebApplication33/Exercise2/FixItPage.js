@@ -21,9 +21,8 @@ var addTags = function() {
 // Use properties creatively to display things at the html page
 
 var windowProp = function () {
-    var windowProp = "Window height: " + window.innerHeight + " and Window width: " + window.innerWidth;
-    window.alert(windowProp);
-    
+    var windowProp = "Window Location: " + window.location + " and Window width: " + window.innerWidth;
+    //window.alert(windowProp);
     return windowProp;
 };
 
@@ -31,10 +30,16 @@ var windowProp = function () {
 
 // 5. PLay with the Methods 
 
-
-
 // ### DOM page 126:###
 // 6. Play with the DOM-properties
+
+var getDOMProp = function () {
+    window.alert("DokumentURL " + document.URL + " , " + "Titel " + document.title);
+    window.alert("Domän: " + document.domain + " , " + "Senast ändrat " + document.lastModified);
+
+    document.title = "Sidans Titel";
+    return document.domain + " , " + document.lastModified + "/r/n , " + document.URL + " , " + document.title;
+};
 
 // ### String objects page 128, 129: ###
 // 7. Save the the text from the makeMeAnArray-paragraph into an array.
