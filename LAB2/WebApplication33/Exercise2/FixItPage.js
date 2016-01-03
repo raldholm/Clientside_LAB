@@ -77,14 +77,37 @@ var roundOneNumberInParagraph = function () {
     //alert(array[4]);
     // plats nummer 5 i arrayen skall avrundas till 2 decimaler
     array[4] = Number(array[4]).toFixed(2);
+
+    var text = "";
+    for (var i = 0; i < array.length; i++) {
+        text += array[i] + " ";
+    }
+    document.getElementById("makeMeAnArray").innerHTML = text;
+
     //alert(array[4]);
-    return array[4];
+    return "Nu har talet i det fjärde elementet på vektorn avrundats";
 }
 
-roundOneNumberInParagraph();
 // 11. replace the 3rd word with PI then roud it to the nearest integer
+var replaceWithPi = function() {
+    var splitArray = makeMeAnArray();
 
+    // Väljer plats 3 i vektorn och konverterar innehållet till Pi med en decimal
+    splitArray[2] = Math.PI.toPrecision(1);
+    alert("Konverterar 3:E ordet till Pi: " + splitArray[2]);
+    // skapar en tom textsträng
+    var text = "";
+    // loopar igenom vektorn och sparar ner i text
+    for (var i = 0; i < splitArray.length; i++) {
+        text += splitArray[i] + " ";
+    }
+    //ersätter vektorn med den nya texten i text
+    document.getElementById("makeMeAnArray").innerHTML = text;
+   
+    return "Har konverterat plats 3 i vektorn till PI";
+}
 
+replaceWithPi();
 
 // ### Date object###
 // 12. Calculate how many days it's until your birthday and present it.
