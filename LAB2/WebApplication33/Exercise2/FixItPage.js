@@ -16,17 +16,18 @@ var addTags = function() {
 // Use properties creatively to display things at the html page
 var windowProp = function () {
     var windowProp = "Window Location: " + window.location + " and Window width: " + window.innerWidth;
-    //window.alert(windowProp);
     return windowProp;
 };
 
 // 4.Add a stylesheet that displays the changed words in fat font and in red.
 
 // 5. PLay with the Methods
-
-//window.alert("Playing");
-//window.print("index.html");
-//window.open(url?http://www.google.se);
+var windowPropMethods = function() {
+    //window.alert("Playing");
+    window.print("index.html");
+    //window.open(url?http://www.google.se);
+    return null;
+}
 
 // ### DOM page 126:###
 // 6. Play with the DOM-properties
@@ -134,6 +135,29 @@ var howManyMinutesOld = function () {
 
 /* For each of the following aplicable exercise below you should present a box on the page 
 with an alert that shows the result when the box is clicked! */
+function functionButtons(textinput, func) {
+    var newElement = document.createElement("div");
+    newElement.className = "buttonFunction";
+    var divText = document.createTextNode(textinput);
+    newElement.appendChild(divText);
+    newElement.addEventListener("click", function() {
+        alert(func());
+    });
+    document.body.appendChild(newElement);
+}
+
+functionButtons("Add tags", addTags);
+functionButtons("Window Properties", windowProp);
+functionButtons("Window Properties/Methods", windowPropMethods);
+functionButtons("Get DOM-Properties", getDOMProp);
+functionButtons("Make me an array", makeMeAnArray);
+functionButtons("Make the pink array .ToUpper", makeArrayToUpper);
+functionButtons("Get the pink array length", arrayLength);
+functionButtons("Check if its a number", checkIfNumberFour);
+functionButtons("Round Number in Paragraph", roundOneNumberInParagraph);
+functionButtons("Replace with Pi", replaceWithPi);
+functionButtons("Days until my birthday", daysUntilBirthday);
+functionButtons("How many minutes old", howManyMinutesOld);
 
 //Bonus exercises:
 //### Demo page 141:###
