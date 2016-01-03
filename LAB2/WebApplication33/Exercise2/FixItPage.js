@@ -28,7 +28,12 @@ var windowProp = function () {
 
 // 4.Add a stylesheet that displays the changed words in fat font and in red.
 
-// 5. PLay with the Methods 
+// 5. PLay with the Methods
+
+//window.alert("Playing");
+//window.print("index.html");
+//window.open(url?http://www.google.se);
+
 
 // ### DOM page 126:###
 // 6. Play with the DOM-properties
@@ -36,7 +41,6 @@ var windowProp = function () {
 var getDOMProp = function () {
     window.alert("DokumentURL " + document.URL + " , " + "Titel " + document.title);
     window.alert("Domän: " + document.domain + " , " + "Senast ändrat " + document.lastModified);
-
     document.title = "Sidans Titel";
     return document.domain + " , " + document.lastModified + "/r/n , " + document.URL + " , " + document.title;
 };
@@ -44,10 +48,27 @@ var getDOMProp = function () {
 // ### String objects page 128, 129: ###
 // 7. Save the the text from the makeMeAnArray-paragraph into an array.
 
+function makeMeAnArray() {
+    var element = document.getElementById("makeMeAnArray");
+    var array = element.innerText.split(" ");
+    return array;
+}
+
+
 // 8. Use all the string methods and propertys allong with the array
 
 // ### String objects page 132: ###
 // 9. check if the 4th element in the array is a number
+var checkIfNumberFour = function () {
+    var splitArray = makeMeAnArray();
+
+    var isNotANumber = !isNaN(splitArray[4]);
+    //alert(isNotANumber);
+    return isNotANumber;
+
+};
+
+checkIfNumberFour();
 
 
 
