@@ -15,7 +15,9 @@ request.onreadystatechange = function () {
     }
 
     if (request.readyState === 4 && request.status === 200) {
-        alert("#");
+
+        alert("READY STATUS = 200");
+
         var jsonObjectet = JSON.parse(request.responseText);
 
         var output = "<ul>";

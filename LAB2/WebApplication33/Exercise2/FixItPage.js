@@ -20,6 +20,13 @@ var addTags = function() {
 // Play with the properties at page 124 in the book. 
 // Use properties creatively to display things at the html page
 
+var windowProp = function () {
+    var windowProp = "Window height: " + window.innerHeight + " and Window width: " + window.innerWidth;
+    window.alert(windowProp);
+    
+    return windowProp;
+};
+
 // 4.Add a stylesheet that displays the changed words in fat font and in red.
 
 // 5. PLay with the Methods 

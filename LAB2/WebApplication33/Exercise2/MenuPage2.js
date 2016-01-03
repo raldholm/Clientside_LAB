@@ -100,5 +100,9 @@ var subsProductsArray = [
     new Product("Meat Sub", "200g", "Sunday", 13.90)
 ];
 //6. GO to file FixIt.html
-//DRINKS
-//Subs
+
+
+var loadJsonBurgersArray = function () {
+    window.location = "index.html";
+};
+
