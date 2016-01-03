@@ -57,6 +57,22 @@ function makeMeAnArray() {
 
 // 8. Use all the string methods and propertys allong with the array
 
+var makeArrayToUpper = function() {
+    var element = document.getElementById("makeMeAnArray");
+    var arrayUpperCase = element.innerText.toUpperCase();
+    //alert(arrayUpperCase);
+    return arrayUpperCase;
+}
+
+
+var arrayLength = function() {
+    var element = document.getElementById("makeMeAnArray");
+    var arrayLength = element.innerText.length;
+    alert(arrayLength);
+    return arrayLength;
+}
+arrayLength();
+
 // ### String objects page 132: ###
 // 9. check if the 4th element in the array is a number
 var checkIfNumberFour = function () {
@@ -68,7 +84,6 @@ var checkIfNumberFour = function () {
 
 };
 
-checkIfNumberFour();
 
 
 
