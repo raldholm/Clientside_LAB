@@ -1,13 +1,8 @@
-﻿/* For each of the following aplicable exercise below you should present a box on the page 
-with an alert that shows the result when the box is clicked! */
-
-
-/* ###Window object at page 124:###
+﻿/* ###Window object at page 124:###
 1. Link the script with FixIt.hmtl */
 // DONE!
 
 /*2. Add som tags that doesn't change the visual part of the paragraph.*/
-
 var addTags = function() {
     var elements = document.getElementsByTagName("p");
     for (var i = 0; i < elements.length; i++) {
@@ -19,7 +14,6 @@ var addTags = function() {
 
 // Play with the properties at page 124 in the book. 
 // Use properties creatively to display things at the html page
-
 var windowProp = function () {
     var windowProp = "Window Location: " + window.location + " and Window width: " + window.innerWidth;
     //window.alert(windowProp);
@@ -34,10 +28,8 @@ var windowProp = function () {
 //window.print("index.html");
 //window.open(url?http://www.google.se);
 
-
 // ### DOM page 126:###
 // 6. Play with the DOM-properties
-
 var getDOMProp = function () {
     window.alert("DokumentURL " + document.URL + " , " + "Titel " + document.title);
     window.alert("Domän: " + document.domain + " , " + "Senast ändrat " + document.lastModified);
@@ -47,31 +39,25 @@ var getDOMProp = function () {
 
 // ### String objects page 128, 129: ###
 // 7. Save the the text from the makeMeAnArray-paragraph into an array.
-
 function makeMeAnArray() {
     var element = document.getElementById("makeMeAnArray");
     var array = element.innerText.split(" ");
     return array;
 }
 
-
 // 8. Use all the string methods and propertys allong with the array
-
 var makeArrayToUpper = function() {
     var element = document.getElementById("makeMeAnArray");
     var arrayUpperCase = element.innerText.toUpperCase();
     //alert(arrayUpperCase);
     return arrayUpperCase;
 }
-
-
 var arrayLength = function() {
     var element = document.getElementById("makeMeAnArray");
     var arrayLength = element.innerText.length;
-    alert(arrayLength);
+    //alert(arrayLength);
     return arrayLength;
 }
-arrayLength();
 
 // ### String objects page 132: ###
 // 9. check if the 4th element in the array is a number
@@ -84,11 +70,18 @@ var checkIfNumberFour = function () {
 
 };
 
-
-
-
 // ### Math page 134: ###
 // 10. Round one of the numbers in the paragraph up/down
+var roundOneNumberInParagraph = function () {
+    var array = makeMeAnArray();
+    //alert(array[4]);
+    // plats nummer 5 i arrayen skall avrundas till 2 decimaler
+    array[4] = Number(array[4]).toFixed(2);
+    //alert(array[4]);
+    return array[4];
+}
+
+roundOneNumberInParagraph();
 // 11. replace the 3rd word with PI then roud it to the nearest integer
 
 
@@ -99,7 +92,8 @@ var checkIfNumberFour = function () {
 
 // 13. Calculate how many minutes old you are and present it.
 
-
+/* For each of the following aplicable exercise below you should present a box on the page 
+with an alert that shows the result when the box is clicked! */
 
 //Bonus exercises:
 //### Demo page 141:###
