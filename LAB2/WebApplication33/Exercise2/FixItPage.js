@@ -107,13 +107,30 @@ var replaceWithPi = function() {
     return "Har konverterat plats 3 i vektorn till PI";
 }
 
-replaceWithPi();
-
 // ### Date object###
 // 12. Calculate how many days it's until your birthday and present it.
+var daysUntilBirthday = function() {
 
+    var today = new Date();
+    var birthDay = new Date("1983-04-03");
+
+    // MATH/METHOD NOT DONE, NO TIME TO GOOGLE IT ATM.
+    var value = 0;
+
+    alert(value);
+
+    return "Det är "  + value + " dagar till jag fyller år!";
+}
+//alert(daysUntilBirthday());
 
 // 13. Calculate how many minutes old you are and present it.
+var howManyMinutesOld = function () {
+    var today = new Date();
+    var birthDay = new Date("1983-04-03");
+    var valueDiff = (today - birthDay) / 1000 / 60;
+    return valueDiff.toFixed(0);
+}
+//alert(howManyMinutesOld());
 
 /* For each of the following aplicable exercise below you should present a box on the page 
 with an alert that shows the result when the box is clicked! */
