@@ -7,9 +7,8 @@ with an alert that shows the result when the box is clicked! */
 // DONE!
 
 /*2. Add som tags that doesn't change the visual part of the paragraph.*/
-alert(addTags());
 
-function addTags() {
+var addTags = function() {
     var elements = document.getElementsByTagName("p");
     for (var i = 0; i < elements.length; i++) {
         var newTag = document.createElement("span");
