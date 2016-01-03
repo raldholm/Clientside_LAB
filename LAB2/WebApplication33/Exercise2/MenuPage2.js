@@ -6,13 +6,13 @@
 var burger1 = {
     name: "Kalles S Burger",
     size: "300g",
-    dayOfTheWeek: "monday",
+    dayOfTheWeek: "Monday",
     price: 19.90
 };
 var burger2 = {
     name: "Skinny Burger",
     size: "60g",
-    dayOfTheWeek: "tuesday",
+    dayOfTheWeek: "Tuesday",
     price: 19.90
 }
 var burger3 = {
@@ -48,6 +48,23 @@ var burger7 = {
 
 //2. create Product objects with constructor notation, 
 //   use the parameters name, size, price, dayOfTheWeek  (page. 108 in book)
+
+var Product = function (name, size, dayOfTheWeek, price) {
+    this.name = name;
+    this.size = size;
+    this.dayOfTheWeek = dayOfTheWeek;
+    this.price = price;
+};
+
+var HamburgerProductsArray = [
+    new Product("Kalles S Burger", "300g", "Monday", 19.90),
+    new Product("Skinny Burger", "60g", "Tuesday", 19.90),
+    new Product("Elmaco Burger", "150g", "Wednesday", 19.90),
+    new Product("BigKingXXL Burger", "500g", "Thursday", 19.90),
+    new Product("Winnare Burger", "200g", "Friday", 19.90),
+    new Product("Shitty Burger", "500g", "Saturday", 19.90),
+    new Product("Fatty burger","100kg","Sunday",19.90)
+];
 
 //3. add 7 drinks to the page using Product.
 
