@@ -3,14 +3,14 @@
 // DONE!
 
 /*2. Add som tags that doesn't change the visual part of the paragraph.*/
-var addTags = function() {
+var addTags = function () {
     var elements = document.getElementsByTagName("p");
     for (var i = 0; i < elements.length; i++) {
         var newTag = document.createElement("span");
         elements[i].appendChild(newTag);
     }
-     return "<span>-tags added!";
- };
+    return "<span>-tags added!";
+};
 
 // Play with the properties at page 124 in the book. 
 // Use properties creatively to display things at the html page
@@ -22,7 +22,7 @@ var windowProp = function () {
 // 4.Add a stylesheet that displays the changed words in fat font and in red.
 
 // 5. PLay with the Methods
-var windowPropMethods = function() {
+var windowPropMethods = function () {
     //window.alert("Playing");
     window.print("index.html");
     //window.open(url?http://www.google.se);
@@ -47,13 +47,13 @@ function makeMeAnArray() {
 }
 
 // 8. Use all the string methods and propertys allong with the array
-var makeArrayToUpper = function() {
+var makeArrayToUpper = function () {
     var element = document.getElementById("makeMeAnArray");
     var arrayUpperCase = element.innerText.toUpperCase();
     //alert(arrayUpperCase);
     return arrayUpperCase;
 }
-var arrayLength = function() {
+var arrayLength = function () {
     var element = document.getElementById("makeMeAnArray");
     var arrayLength = element.innerText.length;
     //alert(arrayLength);
@@ -90,7 +90,7 @@ var roundOneNumberInParagraph = function () {
 }
 
 // 11. replace the 3rd word with PI then roud it to the nearest integer
-var replaceWithPi = function() {
+var replaceWithPi = function () {
     var splitArray = makeMeAnArray();
 
     // Väljer plats 3 i vektorn och konverterar innehållet till Pi med en decimal
@@ -104,13 +104,13 @@ var replaceWithPi = function() {
     }
     //ersätter vektorn med den nya texten i text
     document.getElementById("makeMeAnArray").innerHTML = text;
-   
+
     return "Har konverterat plats 3 i vektorn till PI";
 }
 
 // ### Date object###
 // 12. Calculate how many days it's until your birthday and present it.
-var daysUntilBirthday = function() {
+var daysUntilBirthday = function () {
 
     var myBirthday, today, bday, diff, days;
     myBirthday = [3, 4]; // 3 dagen i månad 4
@@ -124,7 +124,7 @@ var daysUntilBirthday = function() {
 
     ;
 
-    return "Det är "  + days + " dagar till jag fyller år!";
+    return "Det är " + days + " dagar till jag fyller år!";
 }
 
 
@@ -139,17 +139,20 @@ var howManyMinutesOld = function () {
 
 /* For each of the following aplicable exercise below you should present a box on the page 
 with an alert that shows the result when the box is clicked! */
+
+// FUNKTION FÖR ATT SKAPA KNAPPAR, TAR IN "textinput" (som blir namn på knappen) OCH FUNKTIONEN (func) -
 function functionButtons(textinput, func) {
     var newElement = document.createElement("div");
     newElement.className = "buttonFunction";
     var divText = document.createTextNode(textinput);
     newElement.appendChild(divText);
-    newElement.addEventListener("click", function() {
+    newElement.addEventListener("click", function () {
         alert(func());
     });
     document.body.appendChild(newElement);
 }
 
+// FUNKTIONSANROP VIA KNAPPAR (SKICKAR IN functionen i functionButtons();
 functionButtons("Add tags", addTags);
 functionButtons("Window Properties", windowProp);
 functionButtons("Window Properties/Methods", windowPropMethods);
@@ -163,10 +166,39 @@ functionButtons("Replace with Pi", replaceWithPi);
 functionButtons("Days until my birthday", daysUntilBirthday);
 functionButtons("How many minutes old", howManyMinutesOld);
 
+// FUNKTIONER MED INBYGGD "addEventListener-klick" OCH SKAPANDE AV ELEMENT.
+
+var howManyMinutesOld2 = function () {
+
+    // create ELEMENT
+    var newElement = document.createElement("div");
+
+    // add CLASS
+    newElement.className = "buttonFunction2";
+
+    // add TEXTNODE to ELEMENT
+    var divText = document.createTextNode("How many minutes old is Martin?");
+    newElement.appendChild(divText);
+
+    // LÄGGER TILL ELEMENTET EFTER SISTA CHILD I BODY
+    document.body.appendChild(newElement);
+
+    // LÄGGER TILL EVENTLISTENER PÅ ELEMENTET
+    newElement.addEventListener("click", function () {
+
+        // FUNKTION SOM AKTIVERAS VID KLICKEVENT
+        var today = new Date();
+        var birthDay = new Date("1983-04-03");
+        var valueDiff = (today - birthDay) / 1000 / 60;
+        alert(valueDiff.toFixed(0));
+    });
+}
+
+howManyMinutesOld2();
+
+
 //Bonus exercises:
 //### Demo page 141:###
 //-Download the code to the book. Wipe the code from the js-file and rewrite it with the help from the book.
 //-For additional reading and training go to: http://www.w3schools.com/jsref/jsref_obj_string.asp
 // and look at JS String, JS Number, JS Math and JS Date
-
-
